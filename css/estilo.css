@@ -23,15 +23,16 @@
   justify-content: space-evenly;
   background: #240008;
   background: linear-gradient(90deg, #240008 0%, #535553 0%, #868787 30%, #cfcdcd 100%, #f9f9f9 100%);
-  height: 100%;
-  font-size: x-small;
+  font-size: xx-small;
   font-style: italic;
   font-family: 'Roboto', sans-serif;
   color: black; }
 
 .canchas {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   align-items: center; }
 
 .banner {
@@ -72,4 +73,5 @@ h1 {
 
 .sedes {
   display: flex;
+  flex-direction: row;
   justify-content: space-between; }

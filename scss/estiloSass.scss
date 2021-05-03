@@ -26,8 +26,7 @@
     justify-content: space-evenly;
     background: rgb(36,0,8);
     background: linear-gradient(90deg, rgba(36,0,8,1) 0%, rgba(83,85,83,1) 0%, rgba(134,135,135,1) 30%, rgba(207,205,205,1) 100%, rgba(249,249,249,1) 100%);
-    height: 100%;
-    font-size: x-small;
+    font-size: xx-small;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -35,7 +34,9 @@
 
 .canchas{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
     align-items: center;
 
 }
@@ -97,6 +98,9 @@ h1{ @include titulosPrimarios();
 
 .sedes{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
+
+
 
