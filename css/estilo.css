@@ -21,8 +21,7 @@
 .footer {
   display: flex;
   justify-content: space-evenly;
-  background: #240008;
-  background: linear-gradient(90deg, #240008 0%, #535553 0%, #868787 30%, #cfcdcd 100%, #f9f9f9 100%);
+  background-color: #A1C2A5;
   font-size: xx-small;
   font-style: italic;
   font-family: 'Roboto', sans-serif;
@@ -44,6 +43,10 @@
   max-height: 85vh;
   margin: 0 auto; }
 
+.navbar-light .navbar-brand {
+  color: #CEC9A5;
+  font-weight: bolder; }
+
 .container p {
   font-family: 'Roboto', sans-serif;
   color: black; }
@@ -51,19 +54,19 @@
 .container h1 {
   font-family: 'Roboto', sans-serif;
   color: black;
-  background-color: lightpink;
+  background-color: #d3db35;
   text-align: center; }
 
 .container h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: xx-large;
-  background-color: lightgreen;
+  font-size: x-large;
+  background-color: #C4D180;
   text-align: center; }
 
 h1 {
   font-family: 'Roboto', sans-serif;
   color: black;
-  background-color: lightpink;
+  background-color: #d3db35;
   text-align: center; }
 
 .tarjetas {
@@ -73,5 +76,6 @@ h1 {
 
 .sedes {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between; }

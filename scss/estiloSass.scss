@@ -24,8 +24,7 @@
 .footer{
     display: flex;
     justify-content: space-evenly;
-    background: rgb(36,0,8);
-    background: linear-gradient(90deg, rgba(36,0,8,1) 0%, rgba(83,85,83,1) 0%, rgba(134,135,135,1) 30%, rgba(207,205,205,1) 100%, rgba(249,249,249,1) 100%);
+    background-color: #A1C2A5;
     font-size: xx-small;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
@@ -52,6 +51,11 @@
     margin: 0 auto;
 }
 
+.navbar-light .navbar-brand {
+    color: #CEC9A5;
+    font-weight: bolder;
+}
+
 @mixin estiloParrafo {
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -61,14 +65,14 @@
 @mixin titulosPrimarios {
     font-family: 'Roboto', sans-serif;
     color: black;
-    background-color: lightpink;
+    background-color: #d3db35;
     text-align: center;
 }
 
 @mixin estiloTitulosSecundarios {
     font-family: 'Roboto', sans-serif;
-    font-size: xx-large;
-    background-color: lightgreen;
+    font-size: x-large;
+    background-color: #C4D180;
     text-align: center;
     
 }
@@ -98,6 +102,7 @@ h1{ @include titulosPrimarios();
 
 .sedes{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
