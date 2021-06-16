@@ -38,6 +38,13 @@ costoTurno(parseInt(prompt("Cuantas horas desea jugar?")), costoHora);
 alert ("El precio de la reserva es  " + resultado);
 
 
+let reservaFinalizada = document.getElementById("reserva");
+
+reservaFinalizada.innerHTML = resultado ; 
+
+document.reservaFinalizada.appendChild(reservaFinalizada);
+
+
 /////////  JUGADORES ////////////
 
 // const jugadores = [
