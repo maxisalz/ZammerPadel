@@ -1,3 +1,28 @@
+class jugadores{
+    constructor(nombre,telefono,edad) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.edad = edad;
+    }
+}
+
+// let miFormulario = document.getElementById("formulario");
+// // let listaJugadores = [];
+// let miFormulario = () => {
+//     const nombre = document.getElementById("nombre").value;
+//     const edad = document.getElementById("edad").value;
+//     const telefono = document.getElementById("telefono").value;
+//     console.log(miFormulario);
+// }
+
+// const alumnosPresente = new alumnos(nombre, telefono, edad);
+// listaJugadores.push(alumnosPresente);
+// console.log(listaJugadores);
+// const section = document.querySelector(".contenedor");
+// const ul = document.createElement("ul");
+
+let listaJugadores = [];
+
 let datosFormulario = function (){
     let nombre = document.getElementById("nombre").value;
     let edad = document.getElementById("edad").value;
@@ -13,16 +38,28 @@ let datosFormulario = function (){
             } else {
                 console.log(nombre+" "+edad+" "+telefono);
                 let jugador = document.createElement("div");
-                jugador.innerHTML = " <br> Gracias por registrarse, nos pondremos en contacto a la brevedad";
+                jugador.innerHTML = `<div class = "container border border-primary text-center"
+                <p>${nombre} el valor de hora es de $500</p>
+                <p>Nos pondremos en contacto por telefono</p>
+                <button onclick="volver()">Volver</button>`;
                 document.body.appendChild(jugador);
                 document.getElementById("nombre").value = "";
                 document.getElementById("edad").value = "";
                 document.getElementById("telefono").value = "";
+                
             }
         }
     }
+    const jugadoresGuardados = new jugadores(nombre, telefono, edad);
+    listaJugadores.push(jugadoresGuardados);  
+    console.log(listaJugadores);
 }
 
+let volver = function(){
+    location.reload();
+}
+
+// ---------------
 
 
 
