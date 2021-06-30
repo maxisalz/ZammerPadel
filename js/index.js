@@ -5,22 +5,6 @@ class jugadores{
         this.edad = edad;
     }
 }
-
-// let miFormulario = document.getElementById("formulario");
-// // let listaJugadores = [];
-// let miFormulario = () => {
-//     const nombre = document.getElementById("nombre").value;
-//     const edad = document.getElementById("edad").value;
-//     const telefono = document.getElementById("telefono").value;
-//     console.log(miFormulario);
-// }
-
-// const alumnosPresente = new alumnos(nombre, telefono, edad);
-// listaJugadores.push(alumnosPresente);
-// console.log(listaJugadores);
-// const section = document.querySelector(".contenedor");
-// const ul = document.createElement("ul");
-
 let listaJugadores = [];
 
 let datosFormulario = function (){
@@ -53,13 +37,16 @@ let datosFormulario = function (){
     const jugadoresGuardados = new jugadores(nombre, telefono, edad);
     listaJugadores.push(jugadoresGuardados);  
     console.log(listaJugadores);
+    localStorage.setItem("nombre", JSON.stringify(nombre));
+    localStorage.setItem("telefono", telefono);
 }
 
 let volver = function(){
     location.reload();
 }
 
-// ---------------
+
+
 
 
 
@@ -134,3 +121,17 @@ let volver = function(){
 // // const aumentos = jugadores.map(nombre => nombre.abono * 1.30);
 // // console.log(aumentos);
 
+// let miFormulario = document.getElementById("formulario");
+// // let listaJugadores = [];
+// let miFormulario = () => {
+//     const nombre = document.getElementById("nombre").value;
+//     const edad = document.getElementById("edad").value;
+//     const telefono = document.getElementById("telefono").value;
+//     console.log(miFormulario);
+// }
+
+// const alumnosPresente = new alumnos(nombre, telefono, edad);
+// listaJugadores.push(alumnosPresente);
+// console.log(listaJugadores);
+// const section = document.querySelector(".contenedor");
+// const ul = document.createElement("ul");
