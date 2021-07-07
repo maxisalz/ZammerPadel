@@ -8,17 +8,17 @@ class jugadores{
 let listaJugadores = [];
 
 let datosFormulario = function (){
-    let nombre = document.getElementById("nombre").value;
-    let edad = document.getElementById("edad").value;
-    let telefono = document.getElementById("telefono").value;
+    let nombre = $("#nombre").val();
+    let edad = $("#edad").val();
+    let telefono = $("#telefono").val();
     if (nombre == ""){
-        document.getElementById("nombre").focus;
+        $("#nombre").focus;
     } else {
         if (edad == ""){
-            document.getElementById("edad").focus;
+            $("#edad").focus;
         } else {
             if (telefono == ""){
-                document.getElementById("telefono").focus;
+                $("#telefono").focus;
             } else {
                 console.log(nombre+" "+edad+" "+telefono);
                 let jugador = document.createElement("div");
@@ -37,6 +37,7 @@ let datosFormulario = function (){
     const jugadoresGuardados = new jugadores(nombre, telefono, edad);
     listaJugadores.push(jugadoresGuardados);  
     console.log(listaJugadores);
+    console.log(nombre);
     localStorage.setItem("nombre", JSON.stringify(nombre));
     localStorage.setItem("telefono", telefono);
 }
