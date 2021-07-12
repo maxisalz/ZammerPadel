@@ -11,39 +11,21 @@ let datosFormulario = function (){
     let nombre = $("#nombre").val();
     let edad = $("#edad").val();
     let telefono = $("#telefono").val();
-    if (nombre == ""){
-        $("#nombre").focus;
-    } else {
-        if (edad == ""){
-            $("#edad").focus;
-        } else {
-            if (telefono == ""){
-                $("#telefono").focus;
-            } else {
-                console.log(nombre+" "+edad+" "+telefono);
-                let jugador = document.createElement("div");
+    console.log(nombre+" "+edad+" "+telefono);
+    let jugador = document.createElement("div");
                 jugador.innerHTML = `<div class = "container border border-primary text-center"
-                <p>${nombre} el valor de la hora es de $500</p>
+                <p>${nombre} el valor de hora es de $500</p>
                 <p>Nos pondremos en contacto por telefono</p>
                 <button onclick="volver()">Volver</button>`;
-                document.body.appendChild(jugador);
-                document.getElementById("nombre").value = "";
-                document.getElementById("edad").value = "";
-                document.getElementById("telefono").value = "";
-                $("#formulario").fadeOut();
-                $("#mensaje").fadeIn()
-                             .delay(1000)
-                             .slideUp(3000);
-                
-            }
-        }
     }
+        
+        
     const jugadoresGuardados = new jugadores(nombre, telefono, edad);
     listaJugadores.push(jugadoresGuardados);  
-    console.log(listaJugadores);
     localStorage.setItem("nombre", JSON.stringify(nombre));
     localStorage.setItem("telefono", telefono);
-}
+    
+
 
 let volver = function(){
     location.reload();
